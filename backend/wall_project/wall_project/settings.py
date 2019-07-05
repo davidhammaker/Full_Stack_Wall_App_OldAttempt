@@ -122,14 +122,23 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-# Permission policy
-# https://www.django-rest-framework.org/api-guide/permissions/
+# Permissions and authentication
+
 
 REST_FRAMEWORK = {
+
+    # Permissions
+    # https://www.django-rest-framework.org/api-guide/permissions/
     'DEFAULT_PERMISSION_CLASSES': (
 
         # We want to make sure the data is read-only for unauthenticated
         # users:
         'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ),
+
+    # Authentication with Simple JWT
+    # https://github.com/davesque/django-rest-framework-simplejwt
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
