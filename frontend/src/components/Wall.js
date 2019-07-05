@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 
 export class NewComponent extends Component {
     render() {
-        return (
-            <div>
-                <p>Paragraph test.</p>
-            </div>
-        )
+        return this.props.posts.map((post) => (
+            <React.Fragment>
+                <h3>Post by <em>{ post.author }</em></h3>
+                <p>{ post.message }</p>
+            </React.Fragment>
+        ));
     }
 }
 
