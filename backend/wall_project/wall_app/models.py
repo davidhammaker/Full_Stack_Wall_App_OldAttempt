@@ -11,4 +11,4 @@ class Post(models.Model):
     def __str__(self):
         d = self.date_posted
         return f'{self.author.username}_' \
-            f'{d.year}-{d.day}-{d.month}_{d.hour}:{d.minute}:{d.second}'
+            f'{d.year}-{d.month}-{d.day}_{d.hour}:{d.minute}:{d.second}'
