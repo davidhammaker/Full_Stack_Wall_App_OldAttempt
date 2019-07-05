@@ -120,3 +120,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# Permission policy
+# https://www.django-rest-framework.org/api-guide/permissions/
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+
+        # We want to make sure the data is read-only for unauthenticated
+        # users:
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    )
+}
