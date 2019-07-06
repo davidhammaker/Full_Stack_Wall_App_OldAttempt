@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Wall from './components/Wall';
+import Register from './components/Register';
 import $ from 'jquery';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -28,6 +29,7 @@ class App extends Component {
               <Wall posts={this.state.posts}/>
             )} />
 
+            <Route path="/register/" component={Register} />
           </div>
         </div>
       </Router>
