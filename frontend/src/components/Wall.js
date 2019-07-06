@@ -5,9 +5,7 @@ import PropTypes from 'prop-types';
 class Wall extends Component {
     render() {
         return this.props.posts.map((post) => (
-            <div className="box">
-                <Post key={post.id} post={post}/>
-            </div>
+            <Post key={post.id} post={post}/>
         ));
     }
 }

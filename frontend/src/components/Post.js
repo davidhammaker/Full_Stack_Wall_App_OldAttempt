@@ -7,7 +7,7 @@ class Post extends Component {
         const {message} = this.props.post;
 
         return (
-            <div>
+            <div className="box">
                 { message }
             </div>
         )
