@@ -26,10 +26,12 @@ class App extends Component {
       email: email,
       password1: password1,
       password2: password2
-    }
+    };
     let promise = $.post("http://127.0.0.1:8000/register/", newUser);
     promise.then(
-      data => this.setState({ users: [...this.state.users, data]}),
+      data => function(data) {
+        this.setState({ users: [...this.state.users, data]});
+      },
       error => console.log(error)
     );
   }
