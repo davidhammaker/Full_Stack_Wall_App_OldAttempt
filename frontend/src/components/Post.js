@@ -14,9 +14,9 @@ class Post extends Component {
     }
 }
 
-export default Post;
-
 // PropTypes
 Post.propTypes = {
-    posts: PropTypes.array.isRequired
+    post: PropTypes.object.isRequired
 }
+
+export default Post;

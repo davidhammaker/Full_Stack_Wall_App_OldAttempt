@@ -12,9 +12,9 @@ class Wall extends Component {
     }
 }
 
-export default Wall;
-
 // PropTypes
 Wall.propTypes = {
     posts: PropTypes.array.isRequired
 }
+
+export default Wall;
