@@ -7,7 +7,8 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 class App extends Component {
 
   state = {
-    posts: []
+    posts: [],
+    users: []
   }
 
   componentDidMount() {
@@ -15,6 +16,21 @@ class App extends Component {
     promise.then(
       data => this.setState({ posts: data }),
       error => console.log('Error: ', error)
+    );
+  }
+
+  // Add User
+  addUser = (username, email, password1, password2) => {
+    const newUser = {
+      username: username,
+      email: email,
+      password1: password1,
+      password2: password2
+    }
+    let promise = $.post("http://127.0.0.1:8000/register/", newUser);
+    promise.then(
+      data => this.setState({ users: [...this.state.users, data]}),
+      error => console.log(error)
     );
   }
 
@@ -29,7 +45,9 @@ class App extends Component {
               <Wall posts={this.state.posts}/>
             )} />
 
-            <Route path="/register/" component={Register} />
+            <Route path="/register/" render={props => (
+              <Register addUser={this.addUser} />
+            )} />
           </div>
         </div>
       </Router>

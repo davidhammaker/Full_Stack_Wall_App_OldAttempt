@@ -14,7 +14,7 @@ class Register extends Component {
 
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.register(this.state.title);
+        this.props.addUser(this.state.title);
         this.setState({
             username: '',
             email: '',
