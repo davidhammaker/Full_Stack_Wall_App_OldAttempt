@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Post from './Post';
+import PropTypes from 'prop-types';
 
 class Wall extends Component {
     render() {
@@ -12,3 +13,8 @@ class Wall extends Component {
 }
 
 export default Wall;
+
+// PropTypes
+Wall.propTypes = {
+    posts: PropTypes.array.isRequired
+}
