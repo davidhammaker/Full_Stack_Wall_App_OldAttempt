@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Wall from './components/Wall';
 import $ from 'jquery';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 class App extends Component {
 
@@ -18,13 +19,19 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <h1>Test</h1>
-        <div className="container">
-          <Wall posts={this.state.posts}/>
+      <Router>
+        <div>
+          <h1>Wall App</h1>
+          <div className="container">
+
+            <Route exact path="/" render={props => (
+              <Wall posts={this.state.posts}/>
+            )} />
+
+          </div>
         </div>
-      </div>
-    )
+      </Router>
+    );
   }
 }
 
