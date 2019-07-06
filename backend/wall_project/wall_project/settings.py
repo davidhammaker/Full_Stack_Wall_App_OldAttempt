@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     # Add CORS headers
     'corsheaders',
 
-    'wall_app.apps.WallAppConfig'
+    'wall_app.apps.WallAppConfig',
+    'users.apps.UsersConfig'
 ]
 
 MIDDLEWARE = [
