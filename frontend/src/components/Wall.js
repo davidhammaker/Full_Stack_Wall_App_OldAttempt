@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 class Wall extends Component {
     render() {
         return this.props.posts.map((post) => (
-            <React.Fragment>
+            <div className="box">
                 <Post key={post.id} post={post}/>
-            </React.Fragment>
+            </div>
         ));
     }
 }

@@ -1,4 +1,49 @@
-* {
-  margin: 0;
-  padding: 0;
+body, div, ul, h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #ecf9f2;
+}
+
+h1{
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #114411;
+}
+
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+
+.box{
+    background: #ffffff;
+    padding: 25px;
+    vertical-align: top;
+    margin: 15px;
+}
+
+@media only screen and (max-width: 800px) {
+    .container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .container{
+        max-width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .box{
+        padding: 10px;
+        margin-right: 0;
+        margin-left: 0;
+    }
 }

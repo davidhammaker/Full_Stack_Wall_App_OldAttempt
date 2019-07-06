@@ -30,7 +30,9 @@ export class App extends Component {
     return (
       <div>
         <h1>Test</h1>
-        <Wall posts={this.state.posts}/>
+        <div className="container">
+          <Wall posts={this.state.posts}/>
+        </div>
       </div>
     )
   }
