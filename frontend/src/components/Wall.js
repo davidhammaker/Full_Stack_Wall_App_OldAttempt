@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Post from './Post';
 
-export class NewComponent extends Component {
+export class Wall extends Component {
     render() {
         return this.props.posts.map((post) => (
             <React.Fragment>
-                <h3>Post by <em>{ post.author }</em></h3>
-                <p>{ post.message }</p>
+                <Post key={post.id} post={post}/>
             </React.Fragment>
         ));
     }
 }
 
-export default NewComponent
+export default Wall;
